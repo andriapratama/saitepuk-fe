@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#__next {
+  scroll-behavior: smooth;
+}
+
 .font-shadow {
   font-family: "Shadows Into Light", cursive;
 }
