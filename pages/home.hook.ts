@@ -14,10 +14,6 @@ interface Data {
   price: number;
 }
 
-interface ScrollTo {
-  to: number;
-  behavior: string;
-}
 export const useHome = () => {
   const menu: Menu[] = [
     { value: "all", name: "Semua" },
@@ -219,13 +215,6 @@ export const useHome = () => {
       price: 25000,
     },
   ];
-
-  const scrollTop = () => {
-    window.scrollTo({
-      to: 0,
-      behavior: "smooth",
-    });
-  };
 
   const [menuValue, setMenuValue] = useState<string>("all");
 
