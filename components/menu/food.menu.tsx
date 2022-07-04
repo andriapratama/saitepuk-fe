@@ -4,6 +4,7 @@ interface FoodMenu {
   name: string;
   desc: string;
   price: number;
+  onClick: () => void;
 }
 
 export const FoodMenu: React.FC<FoodMenu> = ({

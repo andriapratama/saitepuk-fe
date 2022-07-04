@@ -3,6 +3,7 @@ import React from "react";
 interface DrinkMenu {
   name: string;
   price: number;
+  onClick: () => void;
 }
 
 export const DrinkMenu: React.FC<DrinkMenu> = ({ name, price, ...props }) => {
