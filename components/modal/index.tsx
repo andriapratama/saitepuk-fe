@@ -31,7 +31,7 @@ export const Modal: React.FC<Modal> = ({
         <Settings className="absolute h-[60px] w-[60px] animate-spin-slow text-slate-200" />
       ) : null}
 
-      <div className="relative h-screen w-[90%]">
+      <div className="relative h-screen w-[90%] delay-200">
         <Image
           src={`/images/${image}`}
           alt="menu"
