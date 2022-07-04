@@ -9,17 +9,22 @@ interface Data {
   category: string;
   subCategory: string;
   price: number;
+  image: string;
 }
 
 interface MenuContainer {
   children: string;
   data: Data[];
   subCategory: string;
+  setIsShowModal: (active: boolean) => void;
+  setImage: (active: string) => void;
 }
 export const DrinkMenuContainer: React.FC<MenuContainer> = ({
   children,
   data,
   subCategory,
+  setIsShowModal,
+  setImage,
 }) => {
   return (
     <>
@@ -29,7 +34,15 @@ export const DrinkMenuContainer: React.FC<MenuContainer> = ({
         {data.map((value, index) => {
           if (value.category === "drink" && value.subCategory === subCategory) {
             return (
-              <DrinkMenu name={value.name} price={value.price} key={index} />
+              <DrinkMenu
+                name={value.name}
+                price={value.price}
+                key={index}
+                onClick={() => {
+                  setIsShowModal(true);
+                  setImage(value.image);
+                }}
+              />
             );
           } else {
             return null;
