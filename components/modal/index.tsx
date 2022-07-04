@@ -1,22 +1,20 @@
 import Image from "next/image";
-import { X } from "react-feather";
+import { X, Settings } from "react-feather";
 
 interface Modal {
   isShowModal: boolean;
   setIsShowModal: (active: boolean) => void;
   image: string;
-  setImage: (active: string) => void;
 }
 
 export const Modal: React.FC<Modal> = ({
   isShowModal,
   setIsShowModal,
   image,
-  setImage,
 }) => {
   return (
     <div
-      className={`modal fixed inset-0 z-[999] ${
+      className={`modal fixed inset-0 z-[999] flex items-center justify-center ${
         isShowModal ? "visible" : "invisible"
       }`}
     >
@@ -25,16 +23,22 @@ export const Modal: React.FC<Modal> = ({
           className="text-6xl text-white"
           onClick={() => {
             setIsShowModal(false);
-            setImage("");
           }}
         />
       </div>
-      <Image
-        src={`/images/${image}`}
-        alt="food"
-        layout="fill"
-        objectFit="contain"
-      />
+
+      {isShowModal ? (
+        <Settings className="absolute h-[60px] w-[60px] animate-spin-slow text-slate-200" />
+      ) : null}
+
+      <div className="relative h-screen w-[90%]">
+        <Image
+          src={`/images/${image}`}
+          alt="menu"
+          layout="fill"
+          objectFit="contain"
+        />
+      </div>
     </div>
   );
 };
