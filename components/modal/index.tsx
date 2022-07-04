@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useEffect } from "react";
 import { X, Settings } from "react-feather";
 
 interface Modal {
@@ -12,6 +13,14 @@ export const Modal: React.FC<Modal> = ({
   setIsShowModal,
   image,
 }) => {
+  useEffect(() => {
+    if (isShowModal === true) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  }, [isShowModal]);
+
   return (
     <div
       className={`modal fixed inset-0 z-[999] flex items-center justify-center ${
@@ -31,14 +40,16 @@ export const Modal: React.FC<Modal> = ({
         <Settings className="absolute h-[60px] w-[60px] animate-spin-slow text-slate-200" />
       ) : null}
 
-      <div className="relative h-screen w-[90%] delay-200">
-        <Image
-          src={`/images/${image}`}
-          alt="menu"
-          layout="fill"
-          objectFit="contain"
-        />
-      </div>
+      {isShowModal ? (
+        <div className="relative h-screen w-[90%] delay-200">
+          <Image
+            src={`/images/${image}`}
+            alt="menu"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+      ) : null}
     </div>
   );
 };
