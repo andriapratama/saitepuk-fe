@@ -28,7 +28,6 @@ export const MenuLayout: React.FC<MenuLayout> = ({ menuValue, data }) => {
         isShowModal={isShowModal}
         setIsShowModal={setIsShowModal}
         image={image}
-        setImage={setImage}
       />
 
       {menuValue === "all" ? (
