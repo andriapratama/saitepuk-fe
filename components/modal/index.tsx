@@ -27,7 +27,7 @@ export const Modal: React.FC<Modal> = ({
         isShowModal ? "visible" : "invisible"
       }`}
     >
-      <div className="modal mt-[100vh] h-[100vh] w-full"></div>
+      <div className="modal mt-[100vh] h-[300px] w-full"></div>
       <div className="fixed top-[15px] right-[15px] z-[9999]">
         <X
           className="text-6xl text-white"
