@@ -12,13 +12,14 @@ interface Data {
   category: string;
   subCategory: string;
   price: number;
+  image: string;
 }
 
 export const useHome = () => {
   const menu: Menu[] = [
-    { value: "all", name: "Semua" },
     { value: "food", name: "Makanan" },
     { value: "drink", name: "Minuman" },
+    { value: "all", name: "Semua" },
   ];
 
   const data: Data[] = [
@@ -29,6 +30,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "main",
       price: 25000,
+      image: "5fec5602f116e.jpeg",
     },
     {
       id: 2,
@@ -37,6 +39,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "main",
       price: 10000,
+      image: "tipat-cantok.jpeg",
     },
     {
       id: 3,
@@ -45,6 +48,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "main",
       price: 15000,
+      image: "lalapan-ayam.jpeg",
     },
     {
       id: 4,
@@ -53,6 +57,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "main",
       price: 15500,
+      image: "nasi-goreng.webp",
     },
     {
       id: 5,
@@ -61,6 +66,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "mie",
       price: 8000,
+      image: "mie-goreng.jpeg",
     },
     {
       id: 6,
@@ -69,6 +75,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "mie",
       price: 8000,
+      image: "mie-kuah.webp",
     },
     {
       id: 7,
@@ -77,6 +84,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "mie",
       price: 10000,
+      image: "mie-goreng-komplit.jpeg",
     },
     {
       id: 8,
@@ -85,6 +93,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "mie",
       price: 10000,
+      image: "mie-kuah-komplit.jpeg",
     },
     {
       id: 9,
@@ -93,6 +102,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "snack",
       price: 5000,
+      image: "kentang.jpeg",
     },
     {
       id: 10,
@@ -101,6 +111,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "snack",
       price: 5000,
+      image: "pisang-goreng.jpeg",
     },
     {
       id: 11,
@@ -109,6 +120,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "snack",
       price: 8000,
+      image: "",
     },
     {
       id: 12,
@@ -117,6 +129,7 @@ export const useHome = () => {
       category: "food",
       subCategory: "snack",
       price: 5000,
+      image: "",
     },
     {
       id: 13,
@@ -125,6 +138,7 @@ export const useHome = () => {
       category: "drink",
       subCategory: "hot",
       price: 3000,
+      image: "",
     },
     {
       id: 14,
@@ -133,6 +147,7 @@ export const useHome = () => {
       category: "drink",
       subCategory: "hot",
       price: 3000,
+      image: "",
     },
     {
       id: 15,
@@ -141,6 +156,7 @@ export const useHome = () => {
       category: "drink",
       subCategory: "hot",
       price: 5000,
+      image: "",
     },
     {
       id: 16,
@@ -149,6 +165,7 @@ export const useHome = () => {
       category: "drink",
       subCategory: "hot",
       price: 5000,
+      image: "",
     },
     {
       id: 17,
@@ -157,6 +174,7 @@ export const useHome = () => {
       category: "drink",
       subCategory: "ice",
       price: 6000,
+      image: "",
     },
     {
       id: 18,
@@ -165,6 +183,7 @@ export const useHome = () => {
       category: "drink",
       subCategory: "ice",
       price: 7000,
+      image: "",
     },
     {
       id: 19,
@@ -173,6 +192,7 @@ export const useHome = () => {
       category: "drink",
       subCategory: "ice",
       price: 3000,
+      image: "",
     },
     {
       id: 20,
@@ -181,6 +201,7 @@ export const useHome = () => {
       category: "drink",
       subCategory: "ice",
       price: 5000,
+      image: "",
     },
     {
       id: 21,
@@ -189,6 +210,7 @@ export const useHome = () => {
       category: "drink",
       subCategory: "bottle",
       price: 5000,
+      image: "",
     },
     {
       id: 22,
@@ -197,6 +219,7 @@ export const useHome = () => {
       category: "drink",
       subCategory: "bottle",
       price: 5000,
+      image: "",
     },
     {
       id: 23,
@@ -205,6 +228,7 @@ export const useHome = () => {
       category: "drink",
       subCategory: "bottle",
       price: 22000,
+      image: "",
     },
     {
       id: 24,
@@ -213,10 +237,11 @@ export const useHome = () => {
       category: "drink",
       subCategory: "bottle",
       price: 25000,
+      image: "",
     },
   ];
 
-  const [menuValue, setMenuValue] = useState<string>("all");
+  const [menuValue, setMenuValue] = useState<string>("food");
 
   return { menu, data, menuValue, setMenuValue };
 };
