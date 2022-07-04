@@ -40,7 +40,7 @@ export const FoodMenuContainer: React.FC<MenuContainer> = ({
                 price={value.price}
                 key={index}
                 onClick={() => {
-                  if (!value.image) {
+                  if (value.image === "") {
                     setIsShowModal(false);
                   } else {
                     setIsShowModal(true);
