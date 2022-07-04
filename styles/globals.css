@@ -16,3 +16,7 @@
 .font-arima {
   font-family: "Arima", cursive;
 }
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+}
