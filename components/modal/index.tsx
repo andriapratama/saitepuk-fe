@@ -22,35 +22,38 @@ export const Modal: React.FC<Modal> = ({
   }, [isShowModal]);
 
   return (
-    <div
-      className={`modal fixed inset-0 z-[999] flex items-center justify-center ${
-        isShowModal ? "visible" : "invisible"
-      }`}
-    >
-      <div className="modal mt-[100vh] h-[300px] w-full"></div>
-      <div className="fixed top-[15px] right-[15px] z-[9999]">
-        <X
-          className="text-6xl text-white"
-          onClick={() => {
-            setIsShowModal(false);
-          }}
-        />
-      </div>
+    <>
+      <div className="modal fixed mt-[100vh] h-[200px] w-full"></div>
 
-      {isShowModal ? (
-        <Settings className="absolute h-[60px] w-[60px] animate-spin-slow text-slate-200" />
-      ) : null}
-
-      {isShowModal ? (
-        <div className="relative h-screen w-[90%] delay-200">
-          <Image
-            src={`/images/${image}`}
-            alt="menu"
-            layout="fill"
-            objectFit="contain"
+      <div
+        className={`modal fixed inset-0 z-[999] flex items-center justify-center ${
+          isShowModal ? "visible" : "invisible"
+        }`}
+      >
+        <div className="fixed top-[15px] right-[15px] z-[9999]">
+          <X
+            className="text-6xl text-white"
+            onClick={() => {
+              setIsShowModal(false);
+            }}
           />
         </div>
-      ) : null}
-    </div>
+
+        {isShowModal ? (
+          <Settings className="absolute h-[60px] w-[60px] animate-spin-slow text-slate-200" />
+        ) : null}
+
+        {isShowModal ? (
+          <div className="relative h-screen w-[90%] delay-200">
+            <Image
+              src={`/images/${image}`}
+              alt="menu"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        ) : null}
+      </div>
+    </>
   );
 };
