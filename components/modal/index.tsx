@@ -43,7 +43,7 @@ export const Modal: React.FC<Modal> = ({
 
       {isShowModal ? (
         <div
-          className="relative min-h-[50%] w-[90%] delay-200"
+          className="relative h-[50%] w-[90%] delay-200 xl:h-[90%] xl:w-[70%]"
           onClick={(e) => e.stopPropagation()}
         >
           <Image
