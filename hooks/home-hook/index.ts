@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Menu {
   value: string;
@@ -142,7 +142,7 @@ export const useHome = () => {
     },
     {
       id: 14,
-      name: "Es Teh",
+      name: "Kopi Tubruk",
       desc: "",
       category: "drink",
       subCategory: "hot",
@@ -242,6 +242,29 @@ export const useHome = () => {
   ];
 
   const [menuValue, setMenuValue] = useState<string>("food");
+  const [isShowModalNotif, setIsShowModalNotif] = useState<boolean>(false);
 
-  return { menu, data, menuValue, setMenuValue };
+  useEffect(() => {
+    setTimeout(() => {
+      setIsShowModalNotif(true);
+    }, 10000);
+    // eslint-disable-next-line
+  }, []);
+
+  useEffect(() => {
+    if (isShowModalNotif === true) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  }, [isShowModalNotif]);
+
+  return {
+    menu,
+    data,
+    menuValue,
+    setMenuValue,
+    isShowModalNotif,
+    setIsShowModalNotif,
+  };
 };
