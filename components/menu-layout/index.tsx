@@ -61,20 +61,20 @@ export const MenuLayout: React.FC<MenuLayout> = ({ menuValue, data }) => {
 
           <DrinkMenuContainer
             data={data}
-            subCategory="hot"
-            setIsShowModal={setIsShowModal}
-            setImage={setImage}
-          >
-            Minuman Hangat
-          </DrinkMenuContainer>
-
-          <DrinkMenuContainer
-            data={data}
             subCategory="ice"
             setIsShowModal={setIsShowModal}
             setImage={setImage}
           >
-            Minuman Dingin
+            Minuman
+          </DrinkMenuContainer>
+
+          <DrinkMenuContainer
+            data={data}
+            subCategory="hot"
+            setIsShowModal={setIsShowModal}
+            setImage={setImage}
+          >
+            Hot Coffee
           </DrinkMenuContainer>
 
           <DrinkMenuContainer
@@ -83,7 +83,7 @@ export const MenuLayout: React.FC<MenuLayout> = ({ menuValue, data }) => {
             setIsShowModal={setIsShowModal}
             setImage={setImage}
           >
-            Minuman Botol
+            Soft Drink
           </DrinkMenuContainer>
         </>
       ) : menuValue === "food" ? (
@@ -119,20 +119,20 @@ export const MenuLayout: React.FC<MenuLayout> = ({ menuValue, data }) => {
         <>
           <DrinkMenuContainer
             data={data}
-            subCategory="hot"
-            setIsShowModal={setIsShowModal}
-            setImage={setImage}
-          >
-            Minuman Hangat
-          </DrinkMenuContainer>
-
-          <DrinkMenuContainer
-            data={data}
             subCategory="ice"
             setIsShowModal={setIsShowModal}
             setImage={setImage}
           >
-            Minuman Dingin
+            Minuman
+          </DrinkMenuContainer>
+
+          <DrinkMenuContainer
+            data={data}
+            subCategory="hot"
+            setIsShowModal={setIsShowModal}
+            setImage={setImage}
+          >
+            Hot Coffee
           </DrinkMenuContainer>
 
           <DrinkMenuContainer
@@ -141,7 +141,7 @@ export const MenuLayout: React.FC<MenuLayout> = ({ menuValue, data }) => {
             setIsShowModal={setIsShowModal}
             setImage={setImage}
           >
-            Minuman Botol
+            Soft Drink
           </DrinkMenuContainer>
         </>
       ) : null}
