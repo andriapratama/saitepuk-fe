@@ -51,7 +51,6 @@ export const Modal: React.FC<Modal> = ({
             alt="menu"
             layout="fill"
             objectFit="contain"
-            onLoad={(e) => console.log(e.target)}
           />
         </div>
       ) : null}
