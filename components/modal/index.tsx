@@ -43,7 +43,7 @@ export const Modal: React.FC<Modal> = ({
 
       {isShowModal ? (
         <div
-          className="relative h-[50%] w-[90%] delay-200 xl:h-[90%] xl:w-[70%]"
+          className="relative h-[50%] w-[90%]"
           onClick={(e) => e.stopPropagation()}
         >
           <Image
@@ -51,6 +51,7 @@ export const Modal: React.FC<Modal> = ({
             alt="menu"
             layout="fill"
             objectFit="contain"
+            onLoad={(e) => console.log(e.target)}
           />
         </div>
       ) : null}
