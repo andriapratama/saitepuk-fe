@@ -6,9 +6,17 @@ import { Hero } from "../components/hero";
 import { MenuLayout } from "../components/menu-layout";
 import { Footer } from "../components/footer";
 import Head from "next/head";
+import { NotificationModal } from "../components/modal/notification.modal";
 
 const Home: NextPage = () => {
-  const { menu, data, menuValue, setMenuValue } = useHome();
+  const {
+    menu,
+    data,
+    menuValue,
+    setMenuValue,
+    isShowModalNotif,
+    setIsShowModalNotif,
+  } = useHome();
 
   const handleClick = (value: string) => {
     setMenuValue(value);
@@ -19,7 +27,13 @@ const Home: NextPage = () => {
       <Head>
         <title>Warung Sai Tepuk</title>
       </Head>
+
       <div className="w-full">
+        <NotificationModal
+          isShowModal={isShowModalNotif}
+          setIsShowModal={setIsShowModalNotif}
+        />
+
         <Hero />
 
         <div className="w-full bg-slate-200 p-5">
