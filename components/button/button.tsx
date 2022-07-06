@@ -8,7 +8,7 @@ interface Button {
 
 export const Button: React.FC<Button> = ({ children, variant, ...props }) => {
   const setClassName =
-    "py-1 px-4 border rounded-md cursor-pointer outline-none text-white";
+    "font-arima py-1 px-4 border rounded-md cursor-pointer outline-none text-white";
 
   const className = () => {
     let newClassName = "";

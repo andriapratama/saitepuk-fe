@@ -9,7 +9,7 @@ interface ButtonMenu {
 export const ButtonMenu: React.FC<ButtonMenu> = ({ children, ...props }) => {
   return (
     <button
-      className="font-arima w-[30%] cursor-pointer rounded-xl border border-black bg-white py-2 text-center"
+      className="font-arima w-[30%] cursor-pointer rounded-xl border border-black bg-white py-2 text-center outline-none"
       {...props}
     >
       {children}
