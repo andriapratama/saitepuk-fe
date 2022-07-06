@@ -16,7 +16,7 @@ export const NotificationModal: React.FC<Modal> = ({
 }) => {
   return (
     <div
-      className={`modal fixed inset-0 flex items-center justify-center ${
+      className={`modal fixed inset-0 z-[99999] flex items-center justify-center ${
         isShowModal ? "visible" : "invisible"
       }`}
       onClick={() => setIsShowModal(false)}

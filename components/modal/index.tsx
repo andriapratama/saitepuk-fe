@@ -42,17 +42,12 @@ export const Modal: React.FC<Modal> = ({
       ) : null}
 
       {isShowModal ? (
-        <div
-          className="relative h-[50%] w-[90%]"
+        <img
+          className="relative h-auto w-[90%] rounded"
+          src={`/images/${image}`}
+          alt="image"
           onClick={(e) => e.stopPropagation()}
-        >
-          <Image
-            src={`/images/${image}`}
-            alt="menu"
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
+        />
       ) : null}
     </div>
   );
