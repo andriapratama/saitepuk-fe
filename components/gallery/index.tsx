@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { useHome } from "../../hooks/home-hook";
+import { useHome } from "../../hooks/home";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

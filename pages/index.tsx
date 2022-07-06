@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import React from "react";
-import Image from "next/image";
 import { ButtonMenu } from "../components/button";
-import { useHome } from "../hooks/home-hook";
+import { useHome } from "../hooks/home";
 import { Hero } from "../components/hero";
 import { MenuLayout } from "../components/menu-layout";
 import { Footer } from "../components/footer";
