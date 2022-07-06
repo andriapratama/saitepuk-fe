@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import React from "react";
+import Image from "next/image";
 import { ButtonMenu } from "../components/button";
 import { useHome } from "../hooks/home-hook";
 import { Hero } from "../components/hero";
@@ -7,6 +8,7 @@ import { MenuLayout } from "../components/menu-layout";
 import { Footer } from "../components/footer";
 import Head from "next/head";
 import { NotificationModal } from "../components/modal/notification.modal";
+import { Gallery } from "../components/gallery";
 
 const Home: NextPage = () => {
   const {
@@ -28,7 +30,7 @@ const Home: NextPage = () => {
         <title>Warung Sai Tepuk</title>
       </Head>
 
-      <div className="w-full">
+      <div className="relative w-full overflow-hidden">
         <NotificationModal
           isShowModal={isShowModalNotif}
           setIsShowModal={setIsShowModalNotif}
@@ -36,7 +38,7 @@ const Home: NextPage = () => {
 
         <Hero />
 
-        <div className="w-full bg-slate-200 p-5">
+        <div className="mb-10 w-full bg-slate-200 p-5">
           <div className="mb-5 flex w-full justify-between">
             {menu.map((value, index) => {
               return (
@@ -52,6 +54,8 @@ const Home: NextPage = () => {
 
           <MenuLayout menuValue={menuValue} data={data} />
         </div>
+
+        <Gallery />
 
         <Footer />
       </div>
