@@ -20,3 +20,19 @@
 .modal {
   background-color: rgba(0, 0, 0, 0.7);
 }
+
+.slick-slider .slick-next {
+  @apply right-[10px] h-full w-[100px] cursor-default;
+}
+
+.slick-slider .slick-next::before {
+  @apply flex w-full cursor-pointer justify-end pr-2 text-3xl;
+}
+
+.slick-slider .slick-prev {
+  @apply left-[10px] z-[99] h-full w-[100px] cursor-default;
+}
+
+.slick-slider .slick-prev::before {
+  @apply flex w-full cursor-pointer pl-2 text-3xl;
+}
