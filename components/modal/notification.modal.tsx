@@ -21,23 +21,27 @@ export const NotificationModal: React.FC<Modal> = ({
       }`}
       onClick={() => setIsShowModal(false)}
     >
-      <Card width="w-[300px]" onClick={(e) => e.stopPropagation()}>
-        <CardTitle>Notification</CardTitle>
+      <div onClick={(e) => e.stopPropagation()}>
+        <Card width="w-[300px]">
+          <CardTitle>
+            <div className="w-full text-center">Note</div>
+          </CardTitle>
 
-        <CardBody>
-          <p className="font-arima text-center">
-            Ketuk menu untuk melihat gambar.
-          </p>
-        </CardBody>
+          <CardBody>
+            <p className="font-arima text-center">
+              Ketuk menu untuk melihat gambar.
+            </p>
+          </CardBody>
 
-        <CardFooter>
-          <div className="flex w-full justify-center">
-            <Button variant="secondary" onClick={() => setIsShowModal(false)}>
-              Tutup
-            </Button>
-          </div>
-        </CardFooter>
-      </Card>
+          <CardFooter>
+            <div className="flex w-full justify-center">
+              <Button variant="secondary" onClick={() => setIsShowModal(false)}>
+                Tutup
+              </Button>
+            </div>
+          </CardFooter>
+        </Card>
+      </div>
     </div>
   );
 };
