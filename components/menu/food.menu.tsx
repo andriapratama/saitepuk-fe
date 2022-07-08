@@ -4,6 +4,7 @@ interface FoodMenu {
   name: string;
   desc: string;
   price: number;
+  status: string;
   onClick: () => void;
 }
 
@@ -11,6 +12,7 @@ export const FoodMenu: React.FC<FoodMenu> = ({
   name,
   desc,
   price,
+  status,
   ...props
 }) => {
   const setPrice = () => {
@@ -24,22 +26,29 @@ export const FoodMenu: React.FC<FoodMenu> = ({
     return newPrice;
   };
   return (
-    <div
-      className="mt-3 flex h-full w-full items-center justify-between border-b-2 border-black pb-2"
-      {...props}
-    >
-      <div className="flex h-auto w-[85%] items-center pl-1">
-        <div className="font-arima block">
-          <div className="mb-1 flex-wrap">
-            <h1 className="text-lg font-bold leading-none">{name}</h1>
-          </div>
-          <div className="flex-wrap">
-            <p className="text-sm leading-none">{desc}</p>
+    <div className="mb-3">
+      <div
+        className=" flex h-full w-full items-center justify-between border-b-2 border-black pb-2"
+        {...props}
+      >
+        <div className="flex h-auto w-[85%] items-center pl-1">
+          <div className="font-arima block">
+            <div className="mb-1 flex flex-wrap items-center">
+              <h1 className="mr-2 text-lg font-bold leading-none">{name}</h1>
+              {status === "enable" ? (
+                <div className="font-arima flex w-[50px] items-center justify-center rounded border border-slate-700 px-2 text-sm">
+                  New
+                </div>
+              ) : null}
+            </div>
+            <div className="flex-wrap">
+              <p className="text-sm leading-none">{desc}</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <h1 className="font-arima pr-2 text-lg font-bold">{setPrice()}K</h1>
+        <h1 className="font-arima pr-2 text-lg font-bold">{setPrice()}K</h1>
+      </div>
     </div>
   );
 };

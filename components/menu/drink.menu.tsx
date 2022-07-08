@@ -3,10 +3,16 @@ import React from "react";
 interface DrinkMenu {
   name: string;
   price: number;
+  status: string;
   onClick: () => void;
 }
 
-export const DrinkMenu: React.FC<DrinkMenu> = ({ name, price, ...props }) => {
+export const DrinkMenu: React.FC<DrinkMenu> = ({
+  name,
+  price,
+  status,
+  ...props
+}) => {
   const setPrice = () => {
     let newPrice = 0;
     if (!price) {
@@ -24,8 +30,13 @@ export const DrinkMenu: React.FC<DrinkMenu> = ({ name, price, ...props }) => {
     >
       <div className="flex h-auto w-[85%] items-center pl-1">
         <div className="font-arima block">
-          <div className="mb-1 flex-wrap">
-            <h1 className="text-lg font-bold leading-none">{name}</h1>
+          <div className="mb-1 flex flex-wrap items-center">
+            <h1 className="mr-2 text-lg font-bold leading-none">{name}</h1>
+            {status === "enable" ? (
+              <div className="font-arima flex w-[50px] items-center justify-center rounded border border-slate-700 px-2 text-sm">
+                New
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
