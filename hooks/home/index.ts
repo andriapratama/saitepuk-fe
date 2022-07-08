@@ -13,6 +13,7 @@ interface Data {
   subCategory: string;
   price: number;
   image: string;
+  status: string;
 }
 
 export const useHome = () => {
@@ -31,6 +32,7 @@ export const useHome = () => {
       subCategory: "main",
       price: 25000,
       image: "5fec5602f116e.jpeg",
+      status: "disable",
     },
     {
       id: 2,
@@ -40,6 +42,7 @@ export const useHome = () => {
       subCategory: "main",
       price: 10000,
       image: "tipat-cantok.jpeg",
+      status: "disable",
     },
     {
       id: 3,
@@ -49,6 +52,7 @@ export const useHome = () => {
       subCategory: "main",
       price: 15000,
       image: "lalapan-ayam.jpeg",
+      status: "disable",
     },
     {
       id: 4,
@@ -58,6 +62,7 @@ export const useHome = () => {
       subCategory: "main",
       price: 15500,
       image: "nasi-goreng.webp",
+      status: "enable",
     },
     {
       id: 5,
@@ -67,6 +72,7 @@ export const useHome = () => {
       subCategory: "mie",
       price: 8000,
       image: "mie-goreng.jpeg",
+      status: "disable",
     },
     {
       id: 6,
@@ -76,6 +82,7 @@ export const useHome = () => {
       subCategory: "mie",
       price: 8000,
       image: "mie-kuah.webp",
+      status: "disable",
     },
     {
       id: 7,
@@ -85,6 +92,7 @@ export const useHome = () => {
       subCategory: "mie",
       price: 10000,
       image: "mie-goreng-komplit.jpeg",
+      status: "disable",
     },
     {
       id: 8,
@@ -94,6 +102,7 @@ export const useHome = () => {
       subCategory: "mie",
       price: 10000,
       image: "mie-kuah-komplit.jpeg",
+      status: "disable",
     },
     {
       id: 9,
@@ -103,6 +112,7 @@ export const useHome = () => {
       subCategory: "snack",
       price: 5000,
       image: "kentang.jpeg",
+      status: "disable",
     },
     {
       id: 10,
@@ -112,6 +122,7 @@ export const useHome = () => {
       subCategory: "snack",
       price: 5000,
       image: "pisang-goreng.jpeg",
+      status: "disable",
     },
     {
       id: 11,
@@ -121,6 +132,7 @@ export const useHome = () => {
       subCategory: "snack",
       price: 8000,
       image: "",
+      status: "disable",
     },
     {
       id: 12,
@@ -130,6 +142,7 @@ export const useHome = () => {
       subCategory: "snack",
       price: 5000,
       image: "",
+      status: "disable",
     },
     {
       id: 13,
@@ -139,6 +152,7 @@ export const useHome = () => {
       subCategory: "hot",
       price: 3000,
       image: "",
+      status: "disable",
     },
     {
       id: 14,
@@ -148,6 +162,7 @@ export const useHome = () => {
       subCategory: "hot",
       price: 3000,
       image: "",
+      status: "disable",
     },
     {
       id: 15,
@@ -157,6 +172,7 @@ export const useHome = () => {
       subCategory: "hot",
       price: 5000,
       image: "",
+      status: "disable",
     },
     {
       id: 16,
@@ -166,6 +182,7 @@ export const useHome = () => {
       subCategory: "hot",
       price: 5000,
       image: "",
+      status: "disable",
     },
     {
       id: 17,
@@ -175,6 +192,7 @@ export const useHome = () => {
       subCategory: "ice",
       price: 6000,
       image: "",
+      status: "disable",
     },
     {
       id: 18,
@@ -184,6 +202,7 @@ export const useHome = () => {
       subCategory: "ice",
       price: 7000,
       image: "",
+      status: "disable",
     },
     {
       id: 19,
@@ -193,6 +212,7 @@ export const useHome = () => {
       subCategory: "ice",
       price: 3000,
       image: "",
+      status: "disable",
     },
     {
       id: 20,
@@ -202,6 +222,7 @@ export const useHome = () => {
       subCategory: "ice",
       price: 5000,
       image: "",
+      status: "enable",
     },
     {
       id: 21,
@@ -211,6 +232,7 @@ export const useHome = () => {
       subCategory: "bottle",
       price: 5000,
       image: "",
+      status: "disable",
     },
     {
       id: 22,
@@ -220,6 +242,7 @@ export const useHome = () => {
       subCategory: "bottle",
       price: 5000,
       image: "",
+      status: "disable",
     },
     {
       id: 23,
@@ -229,6 +252,7 @@ export const useHome = () => {
       subCategory: "bottle",
       price: 22000,
       image: "",
+      status: "disable",
     },
     {
       id: 24,
@@ -238,6 +262,7 @@ export const useHome = () => {
       subCategory: "bottle",
       price: 25000,
       image: "",
+      status: "disable",
     },
   ];
 
