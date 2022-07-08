@@ -10,6 +10,7 @@ interface Data {
   subCategory: string;
   price: number;
   image: string;
+  status: string;
 }
 
 interface MenuContainer {
@@ -32,12 +33,44 @@ export const DrinkMenuContainer: React.FC<MenuContainer> = ({
 
       <div className="w-full">
         {data.map((value, index) => {
-          if (value.category === "drink" && value.subCategory === subCategory) {
+          if (
+            value.category === "drink" &&
+            value.subCategory === subCategory &&
+            value.status === "enable"
+          ) {
             return (
               <DrinkMenu
                 name={value.name}
                 price={value.price}
                 key={index}
+                status={value.status}
+                onClick={() => {
+                  if (value.image === "") {
+                    setIsShowModal(false);
+                  } else {
+                    setIsShowModal(true);
+                    setImage(value.image);
+                  }
+                }}
+              />
+            );
+          } else {
+            return null;
+          }
+        })}
+
+        {data.map((value, index) => {
+          if (
+            value.category === "drink" &&
+            value.subCategory === subCategory &&
+            value.status === "disable"
+          ) {
+            return (
+              <DrinkMenu
+                name={value.name}
+                price={value.price}
+                key={index}
+                status={value.status}
                 onClick={() => {
                   if (value.image === "") {
                     setIsShowModal(false);
