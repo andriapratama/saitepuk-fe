@@ -3,7 +3,6 @@ import React, { ReactNode } from "react";
 interface Card {
   width: string;
   children: ReactNode;
-  onClick: (active: any) => void;
 }
 
 export const Card: React.FC<Card> = ({ width, children, ...props }) => {
