@@ -11,6 +11,7 @@ interface Data {
   subCategory: string;
   price: number;
   image: string;
+  status: string;
 }
 
 interface MenuLayout {
